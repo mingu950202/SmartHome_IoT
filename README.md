@@ -2,6 +2,11 @@
 
 아두이노와 MYSQL를 이용한 스마트홈 프로그램입니다.
 
+1. 아두이노에서 온습도, 자외선, 미세먼지 값을 읽어 온뒤 StateView에서 3초간격으로 실시간 시각화
+2. ControlView에서 임의로 만든 집 내부 환경을 아두이노 시리얼 통신으로 조작
+3. FunctionView에선 사용자가 원하는 기능만 저장하고 간편하게 사용할 수 있게 제작
+4. 3초 동안 받은 실시간 센서값은 MY SQL DB에  
+
 # 프로젝트 정보
 + 설치
   + Visual Studio
@@ -32,5 +37,8 @@
 
 ## 5. FunctionView 간편기능
 ![function1](https://user-images.githubusercontent.com/71310919/93179159-3f61e700-f770-11ea-96ec-a879ef54bdc6.png)
+
+## 6. MY SQL
+![mysql](https://user-images.githubusercontent.com/71310919/93179380-910a7180-f770-11ea-877e-99c55948fd19.png)
 
 
