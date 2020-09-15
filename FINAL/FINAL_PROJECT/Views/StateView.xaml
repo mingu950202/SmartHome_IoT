@@ -1,0 +1,100 @@
+﻿<mah:MetroWindow
+        x:Class="FINAL_PROJECT.Views.StateView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:FINAL_PROJECT.Views"
+        mc:Ignorable="d"
+        Title="State" TitleAlignment="Center" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <!-- 뒤로 가기 -->
+        <Button Grid.Column="1" Grid.Row="0" Height="30" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10"
+                material:ButtonAssist.CornerRadius="10" Background="MediumPurple" Click="Button_Click">
+            <TextBlock Text="←" />
+        </Button>
+
+        <!-- 현재 시간 -->
+        <TextBlock x:Name="TimerBlock" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                   FontFamily="/Final_PROJECT;component/Fonts/#AppleSDGothicNeoB00"  Margin="0,10,0,0"
+                   FontSize="13" Foreground="Black" Grid.ColumnSpan="2"/>
+
+        <!-- 온도 -->
+        <mah:Tile Grid.Column="0" Height="80" Width="50" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,0"
+                  Background="White" FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" >
+            <DockPanel>
+                <Image DockPanel.Dock="Top" Source="/Images/Temp.ico" Height="50" Width="50"/>
+                <TextBlock DockPanel.Dock="Bottom" Text="온   도" Height="20" Width="50" Foreground="Black" TextAlignment="Center" Margin="0, 5, 0 , 0"/>
+            </DockPanel>
+        </mah:Tile>
+        <TextBlock x:Name="TempValue" Grid.Column="0" Grid.Row="1" Height="34" Width="80" Margin="155,26,162,49"
+                   TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" FontSize="30"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Height="34" Width="40" Margin="235,33,122,40"
+                   Text="℃" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" FontSize="25"/>
+
+        <!-- 습도 -->
+        <mah:Tile Grid.Column="0" Grid.Row="2" Height="80" Width="50"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,0"
+                  Background="White" FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" >
+            <DockPanel>
+                <Image DockPanel.Dock="Top" Source="/Images/humid.ico" Height="50" Width="50"/>
+                <TextBlock DockPanel.Dock="Bottom" Text="습   도" Height="20" Width="50" Foreground="Black" TextAlignment="Center" Margin="0, 5, 0 , 0"/>
+            </DockPanel>
+        </mah:Tile>
+        <TextBlock x:Name="HumidValue" Grid.Column="0" Grid.Row="2" Height="34" Width="80" Margin="155,29,162,42"
+                   TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" FontSize="30"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Height="34" Width="40" Margin="235,33,122,40"
+                   Text="%" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" FontSize="25"/>
+
+        <!-- 미세먼지 -->
+        <mah:Tile Grid.Column="2" Grid.Row="2" Height="80" Width="50"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0"
+                  Background="White" FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" >
+            <DockPanel>
+                <Image DockPanel.Dock="Top" Source="/Images/dust.ico" Height="50" Width="50"/>
+                <TextBlock DockPanel.Dock="Bottom" Text="미세먼지" Height="20" Width="50" Foreground="Black" TextAlignment="Center" Margin="0, 5, 0 , 0"/>
+            </DockPanel>
+        </mah:Tile>
+        <TextBlock x:Name="DustValue" Grid.Column="2" Grid.Row="2" Height="34" Width="80" Margin="110,18,205,48"
+                   TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" FontSize="30"/>
+
+        <!-- 자외선 -->
+        <mah:Tile Grid.Column="1" Grid.Row="1" Height="80" Width="50"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0"
+                  Background="White" FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" >
+            <DockPanel>
+                <Image DockPanel.Dock="Top" Source="/Images/UV.png" Height="50" Width="50"/>
+                <TextBlock DockPanel.Dock="Bottom" Text="자 외 선" Height="20" Width="50" Foreground="Black" TextAlignment="Center" Margin="0, 5, 0 , 0"/>
+            </DockPanel>
+        </mah:Tile>
+        <TextBlock x:Name="UVValue" Grid.Column="1" Grid.Row="1" Height="34" Width="60" Margin="110,18,205,48"
+                   TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" FontSize="30"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Height="26" Width="74" Margin="186,34,137,47"
+                   Text="mW/cm^2" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" FontSize="15" FontStyle="Italic"/>
+
+
+
+
+
+    </Grid>
+</mah:MetroWindow>

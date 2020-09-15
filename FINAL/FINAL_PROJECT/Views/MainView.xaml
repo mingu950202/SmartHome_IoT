@@ -1,0 +1,70 @@
+﻿<mah:MetroWindow x:Class="FINAL_PROJECT.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:FINAL_PROJECT.Views"
+                 
+        mc:Ignorable="d"
+        ResizeMode="NoResize" 
+        Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Title="MAIN" TitleAlignment="Center" Loaded="MainView_Loaded" Closed="MainView_Closed"
+                 >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!-- 현재 시간 -->
+        <TextBlock x:Name="TimerBlock"  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-80,10,0,0"
+               FontFamily="/Final_PROJECT;component/Fonts/#AppleSDGothicNeoB00" 
+               FontSize="13" Foreground="Black" Height="50" Grid.Column="2" 
+               />
+
+        <!-- 상태 박스 -->
+        <Button x:Name="StateBox" Grid.Column="1" Grid.Row="1" Width="245" Height="221" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" Click="StateBox_Click" Background="MediumPurple" >
+            <DockPanel >
+                <Image DockPanel.Dock="Top" Width="75" Height="75"  Source="/Images/State.ico" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock DockPanel.Dock="Bottom"  Text="상태" Height="20" TextAlignment="Center" />
+            </DockPanel>
+        </Button>
+
+        <!-- 조작 박스 -->
+        <Button x:Name="ControlBox" Grid.Column="2" Grid.Row="1" Width="326" Height="221" Margin="10"  Background="MediumPurple" VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" Click="ControlBox_Click">
+            <DockPanel >
+                <Image DockPanel.Dock="Top" Width="75" Height="75"  Source="/Images/gamepad.ico" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock DockPanel.Dock="Bottom"  Text="조작" Height="20" TextAlignment="Center" />
+            </DockPanel>
+        </Button>
+
+        <!-- 간편 기능 박스 -->
+        <Button x:Name="FunctionBox" Grid.Column="3" Grid.Row="1" Width="163" Height="221" Margin="10"  Background="MediumPurple" VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontFamily="/FINAL_PROJECT;component/Fonts/#AppleSDGothicNeoB00" Click="FunctionBox_Click" >
+            <DockPanel >
+                <Image DockPanel.Dock="Top" Width="75" Height="75"  Source="/Images/solar-panel.ico" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock DockPanel.Dock="Bottom"  Text="간편 기능" Height="20" TextAlignment="Center" />
+            </DockPanel>
+        </Button>
+
+
+            
+
+    </Grid>
+</mah:MetroWindow>
