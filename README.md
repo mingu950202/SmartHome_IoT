@@ -28,8 +28,9 @@
 ![control](https://user-images.githubusercontent.com/71310919/93179140-3a9d3300-f770-11ea-853b-62d235f17d5d.png)
 
 ## 4. FunctionView
-![function](https://user-images.githubusercontent.com/71310919/93179150-3d982380-f770-11ea-8071-7fd8d607f30e.png
+![function](https://user-images.githubusercontent.com/71310919/93179150-3d982380-f770-11ea-8071-7fd8d607f30e.png)
 
 ## 5. FunctionView 간편기능
-![function1](https://user-images.githubusercontent.com/71310919/93179150-3d982380-f770-11ea-8071-7fd8d607f30e.png
+![function1](https://user-images.githubusercontent.com/71310919/93179159-3f61e700-f770-11ea-96ec-a879ef54bdc6.png)
+
 
