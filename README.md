@@ -16,5 +16,5 @@
   + FINAL.sln MainView에서 사용자 아두이노 포트에 맞게 코드 변경
   + Ctrl + F5 
 # 실행 화면
-1. MainView
+# 1. MainView
 ![main](https://user-images.githubusercontent.com/71310919/93178741-9e732c00-f76f-11ea-8d08-320ed8fb6577.png)
